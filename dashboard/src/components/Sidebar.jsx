@@ -18,9 +18,12 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("/api/v1/user/admin/logout", {
-        withCredentials: true,
-      })
+      .get(
+        "https://hospital-management-site.onrender.com/api/v1/user/admin/logout",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(false);
