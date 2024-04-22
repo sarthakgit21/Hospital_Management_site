@@ -33,8 +33,8 @@ const AppointmentForm = () => {
   const [doctors, setDoctors] = useState([]);
   useEffect(() => {
     const fetchDoctors = async () => {
-      const { data } = await .get(
-        "/api/v1/user/doctors",
+      const { data } = await axios.get(
+        "https://hospital-management-site.onrender.com/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctors(data.doctors);
