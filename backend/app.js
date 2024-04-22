@@ -30,6 +30,8 @@ app.use(
     tempFileDir: "/tmp/",
   })
 );
+
+app.get("/",(req,res)=>res.json("Hello"));
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
